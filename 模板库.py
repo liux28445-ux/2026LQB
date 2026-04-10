@@ -76,3 +76,15 @@ from fractions import Fraction
 f = Fraction(10, 8) # 自动化简为 5/4
 print(f.numerator)  # 分子: 5
 print(f.denominator)# 分母: 4
+
+import heapq
+
+nums = [5, 1, 8, 3]
+heapq.heapify(nums)       # 建堆 → [1, 3, 8, 5]（最小值在索引0）
+
+# ✅ 优势：快速获取最小值 O(1)，插入/删除 O(log n)
+min_val = nums[0]         #  peek: 1（不删除）
+min_val = heapq.heappop(nums)  # 弹出最小值 → 1
+heapq.heappush(nums, 2)   # 插入元素，自动调整堆结构
+
+# ❌ 劣势：只能快速访问最小值，不能随机访问
