@@ -6,7 +6,7 @@ q = deque([1, 2, 3])
 q.append(4)      # 右入队: deque([1, 2, 3, 4])
 q.appendleft(0)  # 左入队: deque([0, 1, 2, 3, 4])
 q.popleft()      # 左出队: 0
-
+print(q[0])
 # defaultdict (默认字典)
 # 何时使用： 图论建图（邻接表）、按照特定规则分组。
 # 优势： 自动处理空键，省去 if key not in d: 的繁琐判断。
