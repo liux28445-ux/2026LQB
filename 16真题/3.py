@@ -1,7 +1,4 @@
-h,w = map(int,input().split())
-x = "2025"*(w//4+1)
-x = x[0:w]
-for _ in range(h):
-
-    print(x)
-    x = x[1:]+x[0]
+h, w = map(int, input().split())
+line = '2025' * 50
+for i in range(h):
+  print(line[i:i+w])
